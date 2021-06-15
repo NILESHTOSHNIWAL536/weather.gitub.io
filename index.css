@@ -1,0 +1,35 @@
+/* *{
+    margin: 0px;padding: 0px;box-sizing: border-box;
+} */
+
+.weather{
+    /* text-align: center; */
+    background-color:rgba(0.4,0.4,0.3,0.5);
+    color: cornsilk;
+    margin-top: 50px;
+    /* opacity: 0.5; */
+    padding: 30PX;
+    border: 2px solid brown;
+}
+
+#search{
+    width: 50%;
+    /* margin: auto; */
+    /* opacity: 0.4; */
+}
+
+body{
+    background-image: url("https://source.unsplash.com/1600x900/?nature");
+    background-repeat: no-repeat;
+}
+#head{
+     font-size: larger;
+     font-style: italic;
+     word-spacing: 3px;
+    letter-spacing: 2px;
+     font-family: fantasy;
+}
+
+#temp{
+    cursor: pointer;
+}
