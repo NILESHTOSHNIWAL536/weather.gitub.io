@@ -33,3 +33,19 @@ body{
 #temp{
     cursor: pointer;
 }
+
+@media screen and (max-width:510px){
+    #btn-click{
+            background-color: blue!important;
+            display: block;
+            width: 140px;
+            font-size: smaller;
+            /* color: crimson; */
+        }
+        #searchData{
+            width: 100%!important;
+            margin-bottom: 2px!important;
+
+        }
+    
+}
