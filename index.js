@@ -57,9 +57,11 @@ document.getElementById("temp").onclick=temp_change;
 
 function time()
 {
+    var month=["JAN","FEB","MAR","APR","MAY","JUNE","JULY","AUG","SEPT","OCT","NOV","DEC"];
+    var week=["SUN","MON","TUE","WED","THUS","FRI","SAT"]
     var get=new Date();
     var pm_am=get.getHours>12?"Pm":"Am";
-    var time_str='web | june 15 | '+get.getHours()+":"+get.getMinutes()+":"+get.getSeconds()+" "+pm_am;
+    var time_str=week[get.getUTCDay()]+' | '+month[get.getMonth()]+ get.getDate()+' | '+get.getHours()+":"+get.getMinutes()+":"+get.getSeconds()+" "+pm_am;
     document.getElementById("date").innerText=time_str;
 }
 
