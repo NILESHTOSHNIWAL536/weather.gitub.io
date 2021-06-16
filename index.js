@@ -8,7 +8,7 @@ function search_data()
     cityName.innerText=searchDatal.value;
     console.log(cityName);
 var request = new XMLHttpRequest();
-            request.open("GET",`https://api.openweathermap.org/data/2.5/weather?q=${searchDatal.value}&appid=93f26e3c57081a6210de53b8dcfdfea4`,true);
+            request.open("GET",`https://api.openweathermap.org/data/2.5/weather?q=${searchDatal.value}&appid=93f26e3c57081a6210de53b8dcfdfea4&units=metric`,true);
     request.onload = function()
                 {
     if( request.status>=200 && request.status<400)
@@ -61,7 +61,7 @@ function time()
     var week=["SUN","MON","TUE","WED","THUS","FRI","SAT"]
     var get=new Date();
     var pm_am=get.getHours>12?"Pm":"Am";
-    var time_str=week[get.getUTCDay()]+' | '+month[get.getMonth()]+ get.getDate()+' | '+get.getHours()+":"+get.getMinutes()+":"+get.getSeconds()+" "+pm_am;
+    var time_str=week[get.getUTCDay()]+' | '+month[get.getMonth()]+" "+ get.getDate()+' | '+get.getHours()%12+":"+get.getMinutes()+":"+get.getSeconds()+" "+pm_am;
     document.getElementById("date").innerText=time_str;
 }
 
