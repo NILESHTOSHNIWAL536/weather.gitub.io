@@ -15,7 +15,7 @@ var request = new XMLHttpRequest();
     {
                 var data = JSON.parse(request.responseText);
                 console.log(data);
-                document.getElementById("temp").innerHTML = data.main.temp+"<sup>o</sup>c";
+                document.getElementById("temp").innerHTML = Math.round(data.main.temp)+"&deg;C";
                 obj= data.main.temp;
                 document.getElementById("hum").innerHTML = "CLOUDS : "+data.clouds.all+" %";
                 document.getElementById('weather').innerHTML=data.weather[0].description+" | "+"humidity : "+data.main.humidity;
@@ -45,10 +45,10 @@ function temp_change()
     var x=document.getElementById("temp");
     if(count%2==0)
     {
-        x.innerHTML=obj+9/5+32+"<sup>o</sup>f";
+        x.innerHTML=Math.round(obj+9/5+32)+"<sup>o</sup>f";
     }
     else{
-        x.innerHTML=obj+"<sup>o</sup>c"; 
+        x.innerHTML=Math.round(obj)+"&deg;C";; 
     }
     count++;
 }
