@@ -29,7 +29,9 @@ body{
     letter-spacing: 2px;
      font-family: fantasy;
 }
-
+#date{
+    text-transform: lowercase;
+}
 #temp{
     cursor: pointer;
 }
